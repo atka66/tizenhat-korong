@@ -11,7 +11,6 @@ public class Main {
         {PuckState.RED, PuckState.RED, PuckState.RED, PuckState.RED},
         {PuckState.RED, PuckState.RED, PuckState.RED, PuckState.RED}
     });
-    System.out.println(startState);
     State[] goalStates = new State[] {
         new State(new PuckState[][]{
             {PuckState.RED, PuckState.RED, PuckState.RED, PuckState.RED},

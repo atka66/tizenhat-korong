@@ -4,15 +4,21 @@ import hu.unideb.inf.mestint.tizenhatkorong.statespace.PuckState;
 import hu.unideb.inf.mestint.tizenhatkorong.statespace.State;
 
 public class RowOperator implements Operator {
+  private final int row;
+
+  public RowOperator(int row) {
+    this.row = row;
+  }
+
   @Override
-  public void apply(State state, int n) {
+  public void apply(State state) {
     PuckState[][] pucks = state.getPucks();
     for (int i = 0; i < 4; i++) {
       for (int j = 0; j < 4; j++) {
-        if (i == n && pucks[4 - j][i] == PuckState.RED) {
+        if (i == row && pucks[3 - j][i] == PuckState.RED) {
           pucks[j][i] = PuckState.BLUE;
         } else {
-          if (i == n && pucks[4 - j][i] == PuckState.BLUE) {
+          if (i == row && pucks[3 - j][i] == PuckState.BLUE) {
             pucks[j][i] = PuckState.RED;
           }
         }
