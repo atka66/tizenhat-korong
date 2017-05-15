@@ -1,4 +1,4 @@
-package hu.unideb.inf.mestint.tizenhatkorong.statespace;
+package hu.unideb.inf.mestint.sixteenpuck.statespace;
 
 public enum PuckState {
   RED("R"),
